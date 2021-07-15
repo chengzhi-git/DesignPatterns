@@ -3,7 +3,7 @@ package singleton;
 /**
  * @Author:chengzhi
  * @Date:2021/7/15 18:51
- * @Description 解决线程同步，防止反序列化
+ * @Description 解决线程同步，防止反序列化（一个类加载到内存，可以从内从new一个实例叫反序列化，枚举类没有构造方法，无法反序列化）
  */
 public enum Mgr08 {
     INSTANCE;
