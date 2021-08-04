@@ -3,10 +3,10 @@ package singleton;
 /**
  * @Author:chengzhi
  * @Date:2021/7/15 18:31
- * @Description
+ * @Description 双重检查单例
  */
 public class Mgr06 {
-    private static  volatile Mgr06 INSTANCE;
+    private static Mgr06 INSTANCE;
 
     private Mgr06() {}
 
@@ -14,11 +14,11 @@ public class Mgr06 {
         if(INSTANCE == null){
             synchronized (Mgr06.class){
                 if(INSTANCE == null){
-                    try {
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        Thread.sleep(1);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
                     INSTANCE = new Mgr06();
                 }
             }

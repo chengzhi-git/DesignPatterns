@@ -7,6 +7,7 @@ package singleton;
  * @Description 饿汉式，JVM保证线程安全，JVM加载到内存一个实例
  * Class.forName("")之加载到内存，不实例化
  * 缺点 不管用到与否，类装在时就完成实例化
+ * 比较实用的写法
  */
 public class Mgr01 {
     private static final Mgr01 INSTANCE = new Mgr01();

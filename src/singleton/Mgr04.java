@@ -13,11 +13,11 @@ public class Mgr04 {
 
     public static synchronized Mgr04 getInstance() {
         if (INSTANCE == null) {
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                Thread.sleep(1);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
             INSTANCE = new Mgr04();
         }
         return INSTANCE;

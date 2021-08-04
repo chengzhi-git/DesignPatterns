@@ -4,11 +4,12 @@ package singleton;
  * @Author:chengzhi
  * @Date:2021/7/15 18:36
  * @Description //懒加载，保证只有一个实例
+ * 静态内部类的写法
  */
 public class Mgr07 {
     private Mgr07() {}
 
-    //只加载外部类，不会加载内部类
+    //加载外部类，不会加载内部类，只有调用时候会加载
     private static class Mgr07Holder{
         private final static Mgr07 INSTANCE = new Mgr07();
     }
