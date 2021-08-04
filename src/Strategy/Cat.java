@@ -5,21 +5,13 @@ package Strategy;
  * @Date:2021/7/17 21:28
  * @Description
  */
-public class Cat implements Compareble<Cat>{
+public class Cat{
     int weight, height;
 
     public Cat(int weight, int height) {
         this.weight = weight;
         this.height = height;
     }
-
-    @Override
-    public int compareTo(Cat c) {
-        if(this.weight < c.weight) return -1;
-        else if(this.weight > c.weight) return 1;
-        else return 0;
-    }
-
     @Override
     public String toString() {
         return "Cat{" +
