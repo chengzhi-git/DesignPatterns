@@ -6,7 +6,8 @@ package singleton;
  * @Description 双重检查单例
  */
 public class Mgr06 {
-    private static Mgr06 INSTANCE;
+    //指令重排问题
+    private static volatile Mgr06 INSTANCE;
 
     private Mgr06() {}
 
